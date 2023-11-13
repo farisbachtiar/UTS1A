@@ -1,17 +1,25 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Input Full Name = ");
+        String _p = reader.readLine();
+        final int s_ = _p.length();
+        int __u = 0;
+        if(s_ % 3 == 1){
+            __u = s_ * 4;
+        } else if (s_ % 4 == 2) {
+            __u = s_ * 5;
+            for(int p=0; p<_p.length();p++) {
+                System.out.println("**");
+            }
+        }
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        if(s_ % 2 == 0 && _p.length() >10 ) {
+            System.out.println(_p + "*");
         }
     }
 }
